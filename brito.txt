@@ -1,0 +1,15 @@
+
+
+\begin{tabular}{|c c |c c c c c c c c >{\huge \bfseries}c c c c c c c |}\hline\multicolumn{17}{|c|}{Schwupps}\\
+\hline
+x & y & $\neg(($ & x & $\land$ & (y & $\to$ & x)) & $\lor$ & y) & $\land$ & $\neg($ & $\neg$ & x & $\land$ & $\neg$ & y)\\
+\hline
+0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0\\
+\hline
+1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1\\
+\hline
+0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 1\\
+\hline
+1 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0\\
+\hline
+\end{tabular}

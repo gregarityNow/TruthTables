@@ -1,0 +1,15 @@
+
+
+\begin{tabular}{|c c |c c c c c >{\huge \bfseries}c c c c |}\hline\multicolumn{11}{|c|}{boazthing}\\
+\hline
+y & x & (y & $\to$ & (y & $\lor$ & x)) & $\leftrightarrow$ & (x & $\to$ & y)\\
+\hline
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 0\\
+\hline
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+\hline
+0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 0\\
+\hline
+1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 1\\
+\hline
+\end{tabular}
