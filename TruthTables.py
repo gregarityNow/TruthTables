@@ -255,6 +255,7 @@ def main():
     print("\t\timplication = \\to")
     print("\t\tbiimplication = \leftrightarrow");
     print("\t\tnegation = \\neg\n")
+    print("\tfor example: \\neg( a \tto b)");
     print("If you follow the prompts, and don't make any syntax errors, you should be good to go.\n")
     print("That said, if you have any questions or would like to report a bug, please don't hesitate to write me up at felix.herron@gmail.com *dabs*\n");
 
