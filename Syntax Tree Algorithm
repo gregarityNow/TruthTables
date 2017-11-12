@@ -1,0 +1,25 @@
+Reads string of chars left to right
+
+Case 1: char c
+	read next symbol S (it will be a V -> or something like that)
+	Construct a tree with root S and left child c
+	right char is next block of thing
+Case 2: neg
+	Indicate that node is neg in an instance variable
+	read next char
+	Case 2.1: a char c
+		c has an instance variable stored to indicate the negation of the node
+	Case 2.2: a parenthesis:
+		Parenthesis node has stored instance variable to indicate the negation of the parenthesis stoff
+		Enter parenthesis recursion
+Case 2: open parenthesis:
+	•Scan for closing parenthesis (if another opening is encountered between, that is taken into account)
+	•Duplicate the the entire block from the opening parenthesis to the closing parenthesis, not including the parentheses
+	•Promise a recursive answer in the place of variable alpha, let us say
+	•Recursively call this (parsel) function, with argument the cleaved subarray
+	•Take returned value, store as child
+	•continue
+
+
+
+
