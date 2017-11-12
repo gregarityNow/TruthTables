@@ -126,7 +126,6 @@ class Tree:
 				if rightAssignment != None:
 					inter.setAssignment(1-rightAssignment);
 				else:
-					# print("home stretch bitch");
 					inter.setAssignment(1-leftAssignment);
 					# print("just set and assignment is: ",inter.getAssignment());
 			elif inter.getValue() in symbols:
