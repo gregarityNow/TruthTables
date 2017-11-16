@@ -291,7 +291,7 @@ def opFoundNegged(l,tree,first,last,neg,op):
 		kidTree.getRoot().setParent(neg,tree);
 		op.setRight(kidTree.getRoot());
 		tree.grow(kidTree.getSize());
-		firstVarFound(l,tree,first+1,last,op);
+		firstVarFound(l,tree,newLast + 2,last,op);
 	# elif first char is neg:
 	elif l[first][0] in negList:
 		otherNeg = Node(l[first][0],None,None,None,l[first][1]);
@@ -312,7 +312,7 @@ def opFound(l,tree,first,last,op):#theoretically finisehd
 		kidTree.getRoot().setParent(op,tree);
 		op.setRight(kidTree.getRoot());
 		tree.grow(kidTree.getSize());
-		firstVarFound(l,tree,first+1,last,op);
+		firstVarFound(l,tree,newLast + 2,last,op);
 	# if first char is var:
 	elif l[first][0] not in symbols and l[first][0] not in negList:
 		# new node var - store first char value in var;
@@ -349,7 +349,7 @@ def firstVarFound(l,tree,first,last,var):#theoretically pythonized
 		tree.grow();
 		opFound(l,tree,first+1,last,op);
 	else:
-		print("syntax error firstVarFound");
+		print("syntax error firstVarFound; l = ",l," first = ",first," last = ",last," var = ",var);
 
 		return;
 
@@ -364,7 +364,7 @@ def firstNegged(l,tree,first,last,neg):#theoretically finished
 		neg.setLeft(kidTree.getRoot());
 		#science
 		tree.grow(kidTree.getSize());
-		firstVarFound(l,tree,newLast+1,last,neg);
+		firstVarFound(l,tree,newLast+2,last,neg);
 
 	elif l[first][0] not in negList and l[first][0] not in symbols:
 
@@ -408,7 +408,7 @@ def scanClosingParen(l,first):#theoretically finished
 			print("syntax error scan closing paren");
 			return -1;
 
-	return newLast;
+	return (newLast-1);
 
 
 def newTree(l,first,last):#theoretically finished
@@ -432,7 +432,7 @@ def newTree(l,first,last):#theoretically finished
 			tree = kidTree;
 		else:
 			print("I don't know how it came to this tbh");
-		first = newLast+1;
+		first = newLast+2;
 		# # if first char in negList:
 		# # 	# new node neg - will have left child.
 		# # 	neg = Node(l[first][0],N)

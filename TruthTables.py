@@ -193,8 +193,14 @@ def generateManipulatedLatex(variableList,variables,title,tree,generic,file):
      #   row = parse(i);
 
         tree.flushAssignments();
+        condString = "";
         for j in range(len(variables)):
-            string += str(inter%2)+ " & ";
+            ##start - addition##
+            condString += str(inter%2)+ " & ";
+            ##end - addition##
+            ##start old code now commented out###
+            #string += str(inter%2) + " & ";
+            ##end old code now commented out###
             # for vl in range(len(variableList)):
             #     if charf(variableList[vl][0])==variables[x]:
             #         variableList[vl] = (variableList[vl][0],variableList[vl][1],inter % 2);
@@ -204,9 +210,16 @@ def generateManipulatedLatex(variableList,variables,title,tree,generic,file):
 
 
             inter = int(inter/2);
-
+        
         if not generic:
             tree.evaluate();
+        ##start - addition##
+        if tree.getRoot().getAssignment() != 1:
+            i += -1;
+            continue;
+        else:
+            string += condString;
+        ##end - addition##
 
         for y in range(len(variableList)):
             if not generic:
