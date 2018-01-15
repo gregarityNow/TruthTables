@@ -262,7 +262,7 @@ def main():
     print("Welcome to Truth Tables, an app that generates Latex code for truth tables (shocker).\n")
     print("There are 2 guidelines for using this software:\n")
     print("\t1. Don't put parentheses on both sides of a character. That is semantically reckless and as such my compiler will recoil in disgust, evincing this in the form of a thrown error and a crash.\n")
-    print("\t2. to use standard operators, use the their latex codes")
+    print("\t2. to use standard operators, use the their latex codes; additionally, make sure to use \\usepackage\{array\} in your latex header\n")
     print("\t\tlogical and = \land")
     print("\t\tlogical or = \lor")
     print("\t\timplication = \\to")
